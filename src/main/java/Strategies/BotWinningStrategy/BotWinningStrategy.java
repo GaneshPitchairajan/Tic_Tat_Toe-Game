@@ -11,6 +11,4 @@ public class BotWinningStrategy implements BotStrategy {
         return null;
     }
 
-    public static interface BotPlayingStrategy {
-    }
 }

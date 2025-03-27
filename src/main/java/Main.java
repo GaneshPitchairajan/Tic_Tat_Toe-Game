@@ -1,8 +1,5 @@
 import Controller.GameController;
-import Models.Bot;
-import Models.BotDifficultyLevel;
-import Models.Player;
-import Models.PlayerType;
+import Models.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,9 +36,15 @@ public class Main {
         }
         //we can add more strategies
         String strategies="Orderone";
-        gameController.StartGame(Size,playerList,strategies);
+        Game game=gameController.StartGame(Size,playerList,strategies);
 
+        while (game.getState().equals(GameState.IN_PROGRESS)){
+            System.out.println("This is the current Board");
+            gameController.DisplayGame(game);
 
+            gameController.executeGame(game);
+
+        }
 
     }
 

@@ -5,30 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed95b70e-4983-4b6c-a222-549105b95fa4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/InvalidGameConstructorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Factory/BotWinningStrategyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Factory/GameWinningStrategyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Bot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/BotDifficultyLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/CellState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Move.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/PlayerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Strategies/BotWinningStrategy/BotStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Strategies/BotWinningStrategy/BotWinningStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Strategies/GameWinningStrategy/GameWinningStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Strategies/GameWinningStrategy/OrderWinningStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/BotWinningStrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/BotWinningStrategyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Strategies/BotWinningStrategy/BotWinningStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Strategies/BotWinningStrategy/BotWinningStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GaneshPitchairajan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GaneshPitchairajan/Tic_Tat_Toe-Game.git",
+    "accountId": "a930660a-1924-496a-ba31-0b343f73dd61"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -59,9 +58,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -85,5 +84,16 @@
       <updated>1742962453029</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
