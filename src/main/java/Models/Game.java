@@ -95,6 +95,21 @@ public class Game {
         }
         int row = move.getCell().getRow();
         int column = move.getCell().getColumn();
+        System.out.printf("The row : %d  and the Column : %d is moved",row,column);
+        board.getBoard().get(row).get(column).setPlayer(tomovePlayer);
+        board.getBoard().get(row).get(column).setState(CellState.FILLED);
+
+        moves.add(move);
+        //updating player index
+        if (gameWinningStrategy.IswinningMove(tomovePlayer.getSymbol(),move.getCell(),board.getSize()))
+        {
+            setWinner(tomovePlayer);
+            setState(GameState.ENDED);
+        }
+        nextplayerindex+=1;
+        nextplayerindex%=players.size();
+
+
 
 
     }
@@ -118,7 +133,7 @@ public class Game {
         }
 
         public GameBuilder setStrategy(String strategyname) {
-            this.strategy = GameWinningStrategyFactory.getStrategy(strategyname);
+            this.strategy = GameWinningStrategyFactory.getStrategy(strategyname,size);
             return this;
         }
 
