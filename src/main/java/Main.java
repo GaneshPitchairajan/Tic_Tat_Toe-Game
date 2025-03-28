@@ -21,16 +21,16 @@ public class Main {
         }
         List<Player> playerList=new ArrayList<>();
         for(int i=1; i<=NumberOfPlayers;i++){
-            System.out.println("Enter the Name of the Player");
+            System.out.printf("Enter the Player %d Name:",i);
             String name= in.next();
-            System.out.println("Enter the Symbol of the Player");
+            System.out.printf("Enter the Player %d Symbol:",i);
             char symbol = in.next().charAt(0);
             playerList.add(new Player(name,symbol,PlayerType.HUMAN));
         }
         if (isBotString.equals("y")){
-            System.out.println("Enter the Name of the BOT");
+            System.out.println("Enter the BOT Name");
             String name= in.next();
-            System.out.println("Enter the Symbol of the BOT");
+            System.out.println("Enter the BOT Symbol");
             char symbol = in.next().charAt(0);
             playerList.add(new Bot(name,symbol, BotDifficultyLevel.EASY));
         }
@@ -44,6 +44,17 @@ public class Main {
 
             gameController.executeGame(game);
 
+        }
+        System.out.println();
+
+        if (game.getState().equals(GameState.ENDED)){
+            System.out.println("The Game is Completed");
+            gameController.DisplayGame(game);
+            System.out.println("The Winner is "+game.getWinner().getName());
+        }
+        if (game.getState().equals(GameState.DRAW)){
+            System.out.println("The Game is Draw");
+            gameController.DisplayGame(game);
         }
 
     }

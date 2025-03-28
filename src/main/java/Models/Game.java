@@ -106,12 +106,14 @@ public class Game {
             setWinner(tomovePlayer);
             setState(GameState.ENDED);
         }
+        Isdraw();
         nextplayerindex+=1;
         nextplayerindex%=players.size();
-
-
-
-
+    }
+    private void Isdraw(){
+        if (moves.size()== board.getSize()* board.getSize() && state.equals(GameState.IN_PROGRESS)){
+            setState(GameState.DRAW);
+        }
     }
     private boolean validateCurrentMove(Move move){
         int row=move.getCell().getRow();

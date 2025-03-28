@@ -39,10 +39,25 @@ public class Player {
 
     }
     public Move decideMove (Board board){
-        System.out.println("Which row you want to move");
-        int row=scanner.nextInt();
-        System.out.println("which column you want to move");
-        int column=scanner.nextInt();
+        boolean Valid=false;
+        int row=0;
+        int column=0;
+        while(!Valid)
+        {
+            System.out.println("Which row you want to move row number Starts from 0?");
+            row=scanner.nextInt();
+            System.out.println("Which column you want to move column number Starts from 0?");
+            column=scanner.nextInt();
+
+            if (row<board.getSize() && column<board.getSize() && row>=0 && column>=0)
+            {
+                Valid=true;
+            }
+            else{
+                System.out.printf("Enter Column with in the Limit 0 to %d ",board.getSize()-1);
+
+            }
+        }
         Cell cell=board.getBoard().get(row).get(column);
         return new Move(this,cell);
 
