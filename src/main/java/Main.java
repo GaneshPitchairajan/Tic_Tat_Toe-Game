@@ -1,6 +1,7 @@
 import Controller.GameController;
 import Models.*;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,7 +13,6 @@ public class Main {
 
         System.out.println("Enter the Dimension of the Game: ");
         int Size= in.nextInt();
-
         System.out.println("Enter ('y' or 'n')  for adding a Bot in the Game: ");
         String isBotString= in.next();
         int NumberOfPlayers=Size-1;
@@ -28,20 +28,27 @@ public class Main {
             playerList.add(new Player(name,symbol,PlayerType.HUMAN));
         }
         if (isBotString.equals("y")){
-            System.out.println("Enter the BOT Name");
+            System.out.printf("Enter the BOT Name:");
             String name= in.next();
-            System.out.println("Enter the BOT Symbol");
+            System.out.printf("Enter the BOT Symbol:");
             char symbol = in.next().charAt(0);
             playerList.add(new Bot(name,symbol, BotDifficultyLevel.EASY));
         }
         //we can add more strategies
-        String strategies="Orderone";
+        String strategies="Orderone";3
         Game game=gameController.StartGame(Size,playerList,strategies);
 
         while (game.getState().equals(GameState.IN_PROGRESS)){
             System.out.println("This is the current Board");
             gameController.DisplayGame(game);
+            while (gameController.undopossible(game)) {
+                System.out.println("Do you want to UNDO the last move? Type y or n:");
+                char undo = in.next().charAt(0);
+                if (undo != 'y') break;
 
+                gameController.undo(game);
+                gameController.DisplayGame(game);
+            }
             gameController.executeGame(game);
 
         }

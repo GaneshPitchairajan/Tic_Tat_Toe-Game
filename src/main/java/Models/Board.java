@@ -29,14 +29,14 @@ public class Board {
 
     public void display(){
         for (int i=0; i < size; i++){
-            //System.out.println("___ ___ ___ ");
+            System.out.println("_______________ ");
             for (int j=0;j< size;j++) {
                 if (board.get(i).get(j).getState().equals(CellState.EMPTY)) {
-                    System.out.print("|  |");
+                    System.out.print("|   |");
                 } else {
                     System.out.print("| " + board.get(i).get(j).getPlayer().getSymbol() + " |");
                 }
             }System.out.println();
-        }//System.out.println("___ ___ ___ ");
+        }System.out.println("_______________ ");
     }
 }

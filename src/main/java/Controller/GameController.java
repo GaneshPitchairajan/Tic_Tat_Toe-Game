@@ -25,4 +25,15 @@ public class GameController {
     public void executeGame(Game game){
         game.makeNextmove();
     }
+    public void undo(Game game){
+        if(!game.getMoves().isEmpty()) {
+            game.undo();
+        }
+        else{
+            System.out.println("There is no Moves Left to undo");
+        }
+    }
+    public  boolean undopossible(Game game){
+        return !game.getMoves().isEmpty();
+    }
 }

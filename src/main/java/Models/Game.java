@@ -76,6 +76,7 @@ public class Game {
 
 
     Game(){
+
     }
     public static GameBuilder getBuilder(){
         return new GameBuilder();
@@ -92,6 +93,9 @@ public class Game {
         while (!isvalid) {
             move = tomovePlayer.decideMove(board);
             isvalid = validateCurrentMove(move);
+            if (!isvalid){
+                System.out.println("***********THE MOVE IS ALREADY MADE ON THE SELECTED CELL ***********");
+            }
         }
         int row = move.getCell().getRow();
         int column = move.getCell().getColumn();
@@ -114,6 +118,24 @@ public class Game {
         if (moves.size()== board.getSize()* board.getSize() && state.equals(GameState.IN_PROGRESS)){
             setState(GameState.DRAW);
         }
+    }
+
+    public void undo(){
+        this.moves.remove(moves.size()-1);
+        this.setBoard(new Board(players.size()+1));
+        this.setState(GameState.IN_PROGRESS);
+        this.setNextplayerindex((getNextplayerindex()+1)%players.size());
+        for (Move move:moves){
+            int row=move.getCell().getRow();
+            int col=move.getCell().getColumn();
+            Player player=move.getPlayer();
+            this.board.getBoard().get(row).get(col).setState(CellState.FILLED);
+            this.board.getBoard().get(row).get(col).setPlayer(player);
+
+        }
+
+
+
     }
     private boolean validateCurrentMove(Move move){
         int row=move.getCell().getRow();
